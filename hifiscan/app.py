@@ -18,6 +18,29 @@ class App(qt.QMainWindow):
 
     def __init__(self):
         super().__init__()
+        self.useRefBox = None
+        self.irSmoothing = None
+        self.kaiserBeta = None
+        self.dbRange = None
+        self.msDuration = None
+        self.simPlot = None
+        self.logIrPlotWidget = None
+        self.irPlot = None
+        self.hi = None
+        self.lo = None
+        self.spectrumPlot = None
+        self.spectrumSmoothing = None
+        self.simPlotWidget = None
+        self.ampl = None
+        self.correctionPlot = None
+        self.logIrPlot = None
+        self.secs = None
+        self.irPlotWidget = None
+        self.correctionPlotWidget = None
+        self.avSimPlot = None
+        self.buttons = None
+        self.refSpectrumPlot = None
+        self.spectrumPlotWidget = None
         self.setWindowTitle('HiFi Scan')
         topWidget = qt.QWidget()
         self.setCentralWidget(topWidget)
@@ -166,6 +189,7 @@ class App(qt.QMainWindow):
         self.task.cancel()
         self.loop.stop()
 
+# this section can crash Windows 11 for some reason, save before editing it.
     def createSpectrumWidget(self) -> qt.QWidget:
         topWidget = qt.QWidget()
         vbox = qt.QVBoxLayout()
@@ -255,7 +279,7 @@ class App(qt.QMainWindow):
         pw.showGrid(True, True, 0.8)
         pw.setLabel('left', 'Corrected Spectrum')
         self.simPlot = pg.PlotDataItem(pen=(150, 100, 60), stepMode='right')
-        pw.addItem(self.simPlot, ignoreBounds=True)
+        pw.addItem(self.simPlot)
         self.avSimPlot = pw.plot(pen=(255, 255, 200), stepMode='right')
         pw.setLogMode(x=True)
         splitter.addWidget(pw)
