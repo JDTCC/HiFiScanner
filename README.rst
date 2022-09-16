@@ -46,7 +46,7 @@ All functionality is also available for interactive use in
 Examples
 ========
 
-Laptop
+Laptop/Desktop
 ------
 
 Lets first optimize the speakers of a laptop.
@@ -241,13 +241,26 @@ with Bluetooth.
 .. |License| image:: https://img.shields.io/badge/license-BSD-blue.svg
    :alt:
 
+Harman curve
+--------------------
+The Harman Curve is the optimal sound signature that most people prefer in their headphones,
+as discovered by Harman International. It’s a close representation of how quality speakers sound in an ideal room.
+It shows the target frequency response of perfectly sounding headphones, what levels should be boosted, and which
+should be subdued (graph below).
 
-Disclaimer
+That is why the Harman curve
+(also Harman target) is one of the best frequency response standards for enjoying music with headphones.
+
+Compared to the flat response, the Harman curve has slightly elevated bass and treble.
+(a few dB on each side, see the graph below).
+
+.. image:: images/harman-curve-target.png
+
+Exclusion of liability
 ==========
-
-The software is provided on the conditions of the simplified BSD license.
-Any blown speakers or shattered glasses are on you.
-
-Enjoy,
+To the extent possible, in no event will the Licensor be liable to You on any legal theory
+(including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential,
+punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the
+Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages.
 
 :author: Ewald de Wit <ewald.de.wit@gmail.com>
